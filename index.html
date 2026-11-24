@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090a0d">
+    <meta name="description" content="Adrian Moreto's software development portfolio.">
+    <title>Adrian Moreto — Software Development Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <svg class="background-polygons" aria-hidden="true" focusable="false" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="mesh-fade" cx="50%" cy="50%" r="70%">
+          <stop offset="0" stop-color="white" stop-opacity=".72"></stop>
+          <stop offset=".58" stop-color="white" stop-opacity=".55"></stop>
+          <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+        </radialGradient>
+        <pattern id="cube-mesh" width="90" height="100" patternUnits="userSpaceOnUse">
+          <path d="M45 0 90 25 45 50 0 25Z M0 25V75L45 100 90 75 M45 50V100" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </pattern>
+        <mask id="mesh-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1600" height="900">
+          <rect width="1600" height="900" fill="url(#mesh-fade)"></rect>
+        </mask>
+      </defs>
+      <rect width="1600" height="900" fill="url(#cube-mesh)" mask="url(#mesh-mask)"></rect>
+    </svg>
+
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Adrian Moreto home"><span class="wordmark-prefix">/dev</span><span class="wordmark-accent">kil</span></a>
+      <nav class="floating-nav" aria-label="Main navigation">
+        <a class="nav-link is-active" href="#home" aria-current="page"><span class="nav-index">01</span><span>Home</span></a>
+        <a class="nav-link" href="#projects"><span class="nav-index">02</span><span>Projects</span></a>
+        <a class="nav-link" href="#profile"><span class="nav-index">03</span><span>Profile</span></a>
+        <a class="nav-link" href="#contact"><span class="nav-index">04</span><span>Contact</span></a>
+      </nav>
+      <span class="header-note">Computer Science · Software Development</span>
+    </header>
+
+    <main>
+      <section class="panel hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Portfolio / 2026</p>
+          <h1 id="hero-title">Adrian<br><span class="accent-word">Moreto.</span></h1>
+          <p class="hero-role">Computer Science Student <span>/</span> Aspiring Software Developer</p>
+          <p class="hero-description">I’m a Computer Science student interested in software development and building practical applications. I adapt quickly to new technologies and bring a detail-oriented approach to collaborative work.</p>
+          <div class="career-objective">
+            <span class="detail-label">Career objective</span>
+            <p>Contribute to useful software projects while continuing to grow as a thoughtful, dependable developer.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View selected work <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="hero-location">Taguig City, Philippines</p>
+        </div>
+
+        <aside class="profile-snapshot reveal" aria-label="Professional snapshot">
+          <div class="snapshot-heading"><span class="eyebrow">Profile / 001</span><span class="snapshot-mark">CS</span></div>
+          <dl class="snapshot-list">
+            <div><dt>Education</dt><dd>B.S. Computer Science</dd></div>
+            <div><dt>Focus</dt><dd>Practical software applications</dd></div>
+            <div><dt>Languages</dt><dd>Python · Dart · Java · C# · SQL</dd></div>
+            <div><dt>Team experience</dt><dd>Hackathon team lead</dd></div>
+          </dl>
+          <p class="snapshot-note">Curious, adaptable, and focused on solving problems with technology.</p>
+        </aside>
+        <div class="panel-foot"><span>Software Development Portfolio</span><span>01 — 04</span></div>
+      </section>
+
+      <section class="panel projects" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> Projects &amp; leadership</p>
+            <h2 id="projects-title">Selected <span class="accent-word">work.</span></h2>
+          </div>
+          <p class="section-note">Collaborative software and game-jam work<br>completed under tight timelines.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-topline"><span>Hackathon · STI Global City · 2026</span><span class="project-number">01</span></div>
+            <h3>CODEFEST 2026</h3>
+            <p class="project-summary">A software solution developed and delivered during a six-hour hackathon.</p>
+            <dl class="project-details">
+              <div><dt>Contribution</dt><dd>Led the development team under a strict time limit.</dd></div>
+              <div><dt>Skills demonstrated</dt><dd>Leadership · Problem-solving · Adaptability</dd></div>
+              <div><dt>Outcome</dt><dd><span class="outcome-highlight">1st Runner-Up</span></dd></div>
+            </dl>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline"><span>Game Jam · YGG PH · 2023</span><span class="project-number">02</span></div>
+            <h3>Web3 Game Jam</h3>
+            <p class="project-summary">A multidisciplinary game-jam entry delivered during a 24-hour event.</p>
+            <dl class="project-details">
+              <div><dt>Contribution</dt><dd>Led the team, coordinated task delegation, and supported project delivery.</dd></div>
+              <div><dt>Skills demonstrated</dt><dd>Leadership · Communication · Digital fluency</dd></div>
+              <div><dt>Outcome</dt><dd>Project delivered within the event timeframe.</dd></div>
+            </dl>
+          </article>
+
+          <article class="project-card project-placeholder reveal">
+            <div class="project-topline"><span>Portfolio entry · Add project</span><span class="project-number">03</span></div>
+            <h3>Academic or personal project</h3>
+            <p class="project-summary">The supplied CV doesn’t include another project description. Add a verified academic, personal, or research output here.</p>
+            <dl class="project-details">
+              <div><dt>Include</dt><dd>Purpose and your individual contribution.</dd></div>
+              <div><dt>Show</dt><dd>Tools, skills demonstrated, and outcome or learning.</dd></div>
+            </dl>
+          </article>
+        </div>
+        <div class="panel-foot"><span>Selected Projects / Leadership</span><span>02 — 04</span></div>
+      </section>
+
+      <section class="panel profile" id="profile" aria-labelledby="profile-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> Professional profile</p>
+            <h2 id="profile-title">Skills for <span class="accent-word">building.</span></h2>
+          </div>
+          <p class="section-note">A growing technical foundation,<br>supported by curiosity and teamwork.</p>
+        </div>
+
+        <div class="profile-layout">
+          <div class="profile-column reveal">
+            <article class="info-card">
+              <h3>About</h3>
+              <p>Computer Science student with a strong interest in software development and practical applications. Quick to adapt to new technologies and workflows, with hackathon leadership experience and a commitment to detail-oriented work.</p>
+            </article>
+            <article class="info-card">
+              <h3>Education</h3>
+              <div class="timeline-item">
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <div><strong>Bachelor of Science in Computer Science</strong><span>STI Global City — College</span></div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <div><strong>Computer Programming</strong><span>WBNHS — Senior High School</span></div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-marker" aria-hidden="true"></span>
+                <div><strong>Junior High School</strong><span>WBNHS</span></div>
+              </div>
+            </article>
+            <article class="info-card">
+              <h3>Training &amp; recognition</h3>
+              <div class="credential-row"><span>Java Fundamentals</span><span>Oracle Academy</span></div>
+              <div class="credential-row"><span>CODEFEST 2026</span><span>1st Runner-Up · Team Lead</span></div>
+              <div class="credential-row"><span>Web3 Game Jam 2023</span><span>Team Lead · YGG PH</span></div>
+            </article>
+          </div>
+
+          <div class="skills-panel reveal">
+            <h3>Technical skills</h3>
+            <div class="skill-group">
+              <h4>Programming</h4>
+              <ul class="skill-list"><li>Python</li><li>Dart</li><li>Java</li><li>C#</li><li>SQL</li></ul>
+            </div>
+            <div class="skill-group">
+              <h4>Backend &amp; data</h4>
+              <ul class="skill-list"><li>Supabase</li><li>SQL</li></ul>
+            </div>
+            <div class="skill-group">
+              <h4>Web &amp; tools</h4>
+              <ul class="skill-list"><li>HTML</li><li>CSS</li><li>Git</li><li>GitHub</li></ul>
+            </div>
+            <div class="skill-group">
+              <h4>Additional</h4>
+              <ul class="skill-list"><li>Hardware &amp; software troubleshooting</li></ul>
+            </div>
+            <div class="soft-skills">
+              <h4>Professional strengths</h4>
+              <p>Critical thinking · Problem-solving · Leadership · Digital fluency · Adaptability · Effective communication</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel-foot"><span>Education / Skills / Training</span><span>03 — 04</span></div>
+      </section>
+
+      <section class="panel contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-content reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Contact</p>
+          <h2 id="contact-title">Let’s build<br><span class="accent-word">something useful.</span></h2>
+          <p class="contact-description">Interested in software development, practical applications, and collaborative problem-solving.</p>
+          <div class="contact-details">
+            <a class="contact-item" href="mailto:Adrian.vhonkil@proton.me"><span>Email</span><strong>Adrian.vhonkil@proton.me</strong><span aria-hidden="true">↗</span></a>
+            <a class="contact-item" href="tel:+639563408598"><span>Phone</span><strong>+63 956 340 8598</strong><span aria-hidden="true">↗</span></a>
+            <div class="contact-item"><span>Location</span><strong>Taguig City, Philippines</strong><span aria-hidden="true">·</span></div>
+          </div>
+        </div>
+        <footer class="contact-footer">
+          <a class="wordmark" href="#home" aria-label="Back to home"><span class="wordmark-prefix">/dev</span><span class="wordmark-accent">kil</span></a>
+          <span>Adrian Moreto · Software Development Portfolio</span>
+          <span class="copyright">Portfolio / 2026</span>
+        </footer>
+        <div class="panel-foot"><span>Thank you for visiting</span><span>04 — 04</span></div>
+      </section>
+    </main>
+  </body>
+</html>
