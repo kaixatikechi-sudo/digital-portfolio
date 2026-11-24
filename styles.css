@@ -186,9 +186,11 @@ h4 { margin: 0; }
 .timeline-item strong, .timeline-item span { display: block; }
 .timeline-item strong { color: #e1e2e5; font-size: 13px; font-weight: 600; }
 .timeline-item div span { margin-top: 4px; color: #a1a3ab; font-size: 12px; }
-.credential-row { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; color: #d2d3d7; font-size: 13px; }
+.credential-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; padding: 9px 0; color: #d2d3d7; font-size: 13px; }
 .credential-row + .credential-row { border-top: 1px solid rgba(255,255,255,.055); }
-.credential-row span:last-child { color: #93959d; text-align: right; }
+.credential-row > span:last-child { color: #93959d; text-align: right; }
+.credential-link { color: #bfc1c8; font-size: 12px; }
+.credential-link:hover { color: var(--accent); text-decoration: underline; }
 .skills-panel { padding: 22px; }
 .skill-group { padding: 14px 0; border-top: 1px solid rgba(255,255,255,.07); }
 .skill-group h4, .soft-skills h4 { margin-bottom: 10px; color: #a5a7af; font: 12px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
