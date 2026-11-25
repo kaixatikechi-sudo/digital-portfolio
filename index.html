@@ -23,16 +23,42 @@
         <pattern id="cube-mesh" width="90" height="100" patternUnits="userSpaceOnUse">
           <path d="M45 0 90 25 45 50 0 25Z M0 25V75L45 100 90 75 M45 50V100" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
         </pattern>
+        <pattern id="cube-mesh-trace" width="90" height="100" patternUnits="userSpaceOnUse">
+          <path class="outline-trace" d="M45 0 90 25 45 50 0 25Z M0 25V75L45 100 90 75 M45 50V100" fill="none" stroke="#e4ff91" stroke-width="2.5" stroke-dasharray="14 28" stroke-linecap="round" stroke-linejoin="round"></path>
+        </pattern>
         <mask id="mesh-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1600" height="900">
           <rect width="1600" height="900" fill="url(#mesh-fade)"></rect>
         </mask>
+        <filter id="wave-mask-soften" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="32"></feGaussianBlur>
+        </filter>
+        <mask id="trace-sweep-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1600" height="900">
+          <g>
+            <animateMotion path="M0 0 C500 0 1000 900 1600 900" dur="10s" repeatCount="indefinite"></animateMotion>
+            <ellipse cx="-1654" cy="-1125" rx="2500" ry="1500" fill="none" stroke="white" stroke-width="250" filter="url(#wave-mask-soften)"></ellipse>
+          </g>
+        </mask>
+        <filter id="outline-glow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="8" result="wide-glow"></feGaussianBlur>
+          <feGaussianBlur stdDeviation="2.5" result="inner-glow"></feGaussianBlur>
+          <feMerge>
+            <feMergeNode in="wide-glow"></feMergeNode>
+            <feMergeNode in="inner-glow"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
       </defs>
       <rect width="1600" height="900" fill="url(#cube-mesh)" mask="url(#mesh-mask)"></rect>
+      <g class="outline-sweep" mask="url(#trace-sweep-mask)" filter="url(#outline-glow)">
+        <rect width="1600" height="900" fill="url(#cube-mesh-trace)" mask="url(#mesh-mask)"></rect>
+      </g>
     </svg>
+    <canvas class="mouse-trail" aria-hidden="true"></canvas>
 
     <header class="site-header">
       <a class="wordmark" href="#home" aria-label="Adrian Moreto home"><span class="wordmark-prefix">/dev</span><span class="wordmark-accent">kil</span></a>
       <nav class="floating-nav" aria-label="Main navigation">
+        <span class="nav-indicator" aria-hidden="true"></span>
         <a class="nav-link is-active" href="#home" aria-current="page"><span class="nav-index">01</span><span>Home</span></a>
         <a class="nav-link" href="#projects"><span class="nav-index">02</span><span>Projects</span></a>
         <a class="nav-link" href="#profile"><span class="nav-index">03</span><span>Profile</span></a>
